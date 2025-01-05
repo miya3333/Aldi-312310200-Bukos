@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--FIRST PAGE-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_bg"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="258dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_start">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="We'd gladly welcome you for a long night 🎉"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/grey2"
+            android:text="Startting a new thing must be done carefully to avoid getting bad luck. 😥"/>
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/first_btn" />
+    </LinearLayout>
+
+</RelativeLayout>

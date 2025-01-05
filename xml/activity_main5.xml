@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--HOME PAGE-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white2"
+    tools:context=".MainActivity5">
+
+    <!--content-->
+    <FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabBar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--nav bar-->
+            <LinearLayout
+                android:id="@+id/navbarUp"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:layout_width="78.24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/logo_home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/logo_discount_home" />
+            </LinearLayout>
+
+            <!--saldo-->
+            <LinearLayout
+                android:id="@+id/saldo"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/navbarUp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/box_saldo"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="24dp">
+                <ImageSwitcher
+                    android:layout_width="126dp"
+                    android:layout_height="62dp"
+                    android:background="@drawable/saldo_home" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_height="50.32dp"
+                    android:background="@drawable/top_up_home" />
+            </LinearLayout>
+
+            <!--content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/saldo"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_home">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:layout_marginTop="16dp">
+                    <!--konten yang di scroll vertikal-->
+                    <LinearLayout
+                        android:id="@+id/mainscroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <!--kategori-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+                            <!--kategori 1-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="16dp">
+
+                                <Button
+                                    android:layout_width="112dp"
+                                    android:layout_height="72dp"
+                                    android:background="@drawable/fish_home" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <Button
+                                    android:layout_width="112dp"
+                                    android:layout_height="72dp"
+                                    android:background="@drawable/bird_home" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <Button
+                                    android:layout_width="112dp"
+                                    android:layout_height="72dp"
+                                    android:background="@drawable/rabbit_home" />
+                            </LinearLayout>
+                            <!--kategori 2-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:layout_width="112dp"
+                                    android:layout_height="72dp"
+                                    android:background="@drawable/cat_home" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <Button
+                                    android:layout_width="112dp"
+                                    android:layout_height="72dp"
+                                    android:background="@drawable/dog_home" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <Button
+                                    android:layout_width="112dp"
+                                    android:layout_height="72dp"
+                                    android:background="@drawable/horse_home"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--kamar pertama-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="205dp"
+                            android:layout_marginTop="16dp"
+                            app:cardBackgroundColor="@color/grey1"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="1dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@color/white1"
+                                android:orientation="vertical">
+                                <!--bagian label dan harga kamar-->
+                                <Button
+                                    android:layout_width="330dp"
+                                    android:layout_height="32dp"
+                                    android:background="@drawable/disroom_home" />
+                                <!--note-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <!--label room-->
+                                    <!--price room-->
+                                    <Button
+                                        android:layout_width="160dp"
+                                        android:layout_height="42dp"
+                                        android:background="@drawable/label_room" />
+
+                                    <LinearLayout
+                                        android:layout_width="160dp"
+                                        android:layout_height="42dp"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/poppins_bold"
+                                            android:text="Rp 950.000"
+                                            android:textColor="@color/oren1"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="320dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="24dp"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp">
+                                    <!--person-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="9dp"
+                                            android:layout_height="13dp"
+                                            android:background="@drawable/person_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="1 Dewasa"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <!--electric-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="6dp"
+                                            android:layout_height="12dp"
+                                            android:background="@drawable/electric_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="Listrik"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <!--wifi-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="9dp"
+                                            android:background="@drawable/wifi_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="Wi-Fi"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <!--water-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="9dp"
+                                            android:layout_height="12dp"
+                                            android:background="@drawable/water_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="Air"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!--sisa kamar-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="11dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:gravity="end"
+                                    android:paddingRight="25dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Sisa 3 Kamar"
+                                        android:textColor="@color/red1"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+                                <!--tinggal pilih-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp">
+
+                                    <LinearLayout
+                                        android:layout_width="112dp"
+                                        android:layout_height="41dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="14dp"
+                                                android:layout_height="14dp"
+                                                android:background="@drawable/check_home" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="8dp"
+                                                android:fontFamily="@font/poppins_medium"
+                                                android:text="Paling Rekomen"
+                                                android:textColor="@color/oren1"
+                                                android:textSize="10sp" />
+                                        </LinearLayout>
+                                        <!--pembatas-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1" />
+                                        <!--pembatas-->
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="14dp"
+                                                android:layout_height="14dp"
+                                                android:background="@drawable/minus_home" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="8dp"
+                                                android:fontFamily="@font/poppins_medium"
+                                                android:text="Tidak Bisa Refund"
+                                                android:textColor="@color/red1"
+                                                android:textSize="10sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <Button
+                                        android:layout_width="81dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/pilih_home" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <!--kamar pertama-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="205dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            app:cardBackgroundColor="@color/grey1"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="1dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@color/white1"
+                                android:orientation="vertical">
+                                <!--bagian label dan harga kamar-->
+                                <Button
+                                    android:layout_width="330dp"
+                                    android:layout_height="32dp"
+                                    android:background="@drawable/disroom_home" />
+                                <!--note-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <!--label room-->
+                                    <!--price room-->
+                                    <Button
+                                        android:layout_width="160dp"
+                                        android:layout_height="42dp"
+                                        android:background="@drawable/label_room" />
+
+                                    <LinearLayout
+                                        android:layout_width="160dp"
+                                        android:layout_height="42dp"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/poppins_bold"
+                                            android:text="Rp 750.000"
+                                            android:textColor="@color/oren1"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="320dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="24dp"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp">
+                                    <!--person-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="9dp"
+                                            android:layout_height="13dp"
+                                            android:background="@drawable/person_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="1 Dewasa"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <!--electric-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="6dp"
+                                            android:layout_height="12dp"
+                                            android:background="@drawable/electric_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="Listrik"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <!--wifi-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="9dp"
+                                            android:background="@drawable/wifi_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="Wi-Fi"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <!--water-->
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="15dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="9dp"
+                                            android:layout_height="12dp"
+                                            android:background="@drawable/water_home" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="Air"
+                                            android:textColor="@color/green1"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!--sisa kamar-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="11dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:gravity="end"
+                                    android:paddingRight="25dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Sisa 1 Kamar"
+                                        android:textColor="@color/red1"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+                                <!--tinggal pilih-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp">
+
+                                    <LinearLayout
+                                        android:layout_width="112dp"
+                                        android:layout_height="41dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="14dp"
+                                                android:layout_height="14dp"
+                                                android:background="@drawable/check_home" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="8dp"
+                                                android:fontFamily="@font/poppins_medium"
+                                                android:text="Paling Rekomen"
+                                                android:textColor="@color/oren1"
+                                                android:textSize="10sp" />
+                                        </LinearLayout>
+                                        <!--pembatas-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1" />
+                                        <!--pembatas-->
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="14dp"
+                                                android:layout_height="14dp"
+                                                android:background="@drawable/minus_home" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="8dp"
+                                                android:fontFamily="@font/poppins_medium"
+                                                android:text="Tidak Bisa Refund"
+                                                android:textColor="@color/red1"
+                                                android:textSize="10sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <!--pembatas-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <!--pembatas-->
+                                    <Button
+                                        android:layout_width="81dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/pilih_home" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--tab bar-->
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white1">
+        <!--home-->
+        <LinearLayout
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="0.25"
+            android:padding="8dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/homew"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/white1"/>
+        </LinearLayout>
+
+        <!--pesanan-->
+        <LinearLayout
+            android:id="@+id/btnPesanan"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="0.25"
+            android:padding="8dp"
+            android:background="@color/white1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/chatb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesanan"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/blue1"/>
+        </LinearLayout>
+
+        <!--notifikasi-->
+        <LinearLayout
+            android:id="@+id/btnNotif"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="0.25"
+            android:padding="8dp"
+            android:background="@color/white1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bellb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifikasi"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/blue1"/>
+        </LinearLayout>
+
+        <!--akun-->
+        <LinearLayout
+            android:id="@+id/btnAkun"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="0.25"
+            android:padding="8dp"
+            android:background="@color/white1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/userb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Akun"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/blue1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
